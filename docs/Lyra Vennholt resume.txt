@@ -1,0 +1,71 @@
+Lyra Vennholt
+
+Email: lyra.vennholt@example.com
+
+
+Phone: (555) 481-2290
+Location: Ridgecrest, CO
+LinkedIn: linkedin.com/in/lyravennholt
+GitHub: github.com/lyravsec
+
+Objective
+
+Detail-oriented and motivated cybersecurity student seeking an entry-level role in security operations or threat analysis. Passionate about protecting digital systems, identifying vulnerabilities, and learning modern security tools and techniques.
+
+Skills
+
+Security Tools: Wireshark, Metasploit, Burp Suite, Nmap, Nessus
+
+Programming/Scripting: Python, Bash, PowerShell
+
+Security Concepts: Threat Modeling, Vulnerability Assessment, Network Security, Incident Response
+
+Operating Systems: Windows, Linux (Kali, Ubuntu)
+
+Other: Risk Analysis, Report Writing, Log Analysis, Packet Inspection
+
+Education
+
+B.S. in Cybersecurity & Information Assurance
+Silver Ridge Technical University — Ridgecrest, CO
+Expected Graduation: December 2026
+
+Projects
+Home Lab SOC Environment
+
+Built a personal Security Operations Center lab using Splunk, Kali Linux, and Security Onion.
+
+Set up simulated attacks to analyze logs and practice incident response.
+
+Network Vulnerability Scanner
+
+Developed a Python-based scanner that maps devices and detects common security misconfigurations.
+
+Integrated email alerts for detected issues.
+
+Phishing Awareness Training Simulation
+
+Created a mock phishing campaign for a class project.
+
+Analyzed click-through data and wrote a detailed report with mitigation recommendations.
+
+Experience
+
+Cybersecurity Intern — Ironcrest Data Defense, Ridgecrest, CO
+May 2024 – August 2024
+
+Monitored security alerts and assisted with triaging potential threats.
+
+Ran scheduled vulnerability scans and helped document remediation steps.
+
+Wrote weekly reports summarizing network activity trends.
+
+Certifications
+
+CompTIA Security+ (In progress)
+
+Introduction to Cybersecurity (Cisco NetAcad)
+
+Interests
+
+Digital forensics • Ethical hacking • Malware analysis • Blue team operations

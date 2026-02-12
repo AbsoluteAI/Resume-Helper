@@ -1,0 +1,71 @@
+Dorian Halvix
+
+Email: dorian.halvix@example.com
+
+
+Phone: (555) 773-9184
+Location: Larkhaven, MN
+LinkedIn: linkedin.com/in/dorianhalvix
+GitHub: github.com/halvix-net
+
+Objective
+
+Motivated and analytical aspiring network engineer seeking an entry-level position in network administration or infrastructure support. Passionate about designing, maintaining, and troubleshooting modern networks while continuing to grow technical expertise.
+
+Skills
+
+Networking: TCP/IP, DHCP, DNS, VLANs, Subnetting, Routing & Switching
+
+Hardware: Routers, Switches, Firewalls, Access Points
+
+Tools & Technologies: Cisco IOS, Wireshark, GNS3, Packet Tracer, SolarWinds
+
+Operating Systems: Windows Server, Linux (Ubuntu, CentOS)
+
+Other Skills: Network Documentation, Troubleshooting, Cabling, Diagramming (Visio, Draw.io)
+
+Education
+
+A.A.S. in Network Systems Technology
+Midwest Crest Technical College — Larkhaven, MN
+Expected Graduation: May 2026
+
+Projects
+Campus Network Simulation
+
+Designed a multi-building network in Packet Tracer with VLAN segmentation and inter-VLAN routing.
+
+Configured redundant links and Spanning Tree Protocol.
+
+Home Lab Router & Firewall Setup
+
+Built a personal lab using Cisco routers and pfSense for firewall and VPN testing.
+
+Implemented port forwarding, access control lists, and monitoring dashboards.
+
+VoIP Deployment Practice
+
+Configured a small VoIP environment in GNS3.
+
+Set up call routing, dial plans, and QoS settings to improve call quality.
+
+Experience
+
+Network Support Assistant — HorizonTech Communications, Larkhaven, MN
+May 2024 – August 2024
+
+Assisted with router and switch configuration for small business clients.
+
+Performed network health checks and resolved basic connectivity issues.
+
+Documented installation steps and updated network topology diagrams.
+
+Certifications
+
+CompTIA Network+
+
+Cisco CCNA (In Progress)
+
+Interests
+
+Home labbing • Routing protocols • Enterprise WiFi • Automation with Python/Ansible

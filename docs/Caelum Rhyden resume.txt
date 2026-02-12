@@ -1,0 +1,72 @@
+Caelum Rhyden
+
+Email: caelum.rhyden@example.com
+
+**
+Phone: (555) 642-1183
+Location: Northbridge, MA
+LinkedIn: linkedin.com/in/caelumrhyden
+GitHub: github.com/crhyden-ai
+Portfolio: rhydenai.dev
+
+Objective
+
+Innovative and research-driven aspiring AI developer seeking an entry-level position in machine learning or AI engineering. Passionate about building intelligent systems, experimenting with neural networks, and applying data-driven solutions to real-world problems.
+
+Skills
+
+Programming Languages: Python, Java, C++, JavaScript
+
+AI/ML Skills: Neural Networks, Supervised/Unsupervised Learning, NLP Basics, Model Optimization
+
+Frameworks & Tools: TensorFlow, PyTorch, Scikit-learn, NumPy, Pandas
+
+Data Skills: Data Cleaning, Feature Engineering, Visualization (Matplotlib, Seaborn)
+
+Other: Git/GitHub, Jupyter, Docker, Linux environments
+
+Education
+
+B.S. in Artificial Intelligence & Data Engineering
+Northbridge Institute of Technology — Northbridge, MA
+Expected Graduation: December 2026
+
+Projects
+SmartVision Image Classifier
+
+Built a Convolutional Neural Network (CNN) in TensorFlow to classify 20+ object categories.
+
+Achieved 92% accuracy using data augmentation and hyperparameter tuning.
+
+ChatSense NLP Model
+
+Created a basic chatbot using transformer-based text embeddings.
+
+Trained on curated datasets and implemented intent detection for improved responses.
+
+Predictive Energy Usage Model
+
+Developed a machine learning model in Python to forecast daily energy consumption for mock utility data.
+
+Used regression techniques and improved model performance by 18% after optimization.
+
+Experience
+
+AI Development Intern — QuantumLayer Innovations, Northbridge, MA
+June 2024 – August 2024
+
+Assisted with data preprocessing and exploratory analysis for ML experiments.
+
+Built prototype models for anomaly detection using Python and Scikit-learn.
+
+Contributed to documentation and helped prepare experiment reports for senior researchers.
+
+Certifications
+
+Machine Learning Specialization (Coursera)
+
+TensorFlow Developer Certificate (In Progress)
+
+Interests
+
+Neural networks • Robotics • Generative AI • Reinforcement learning • Data visualization

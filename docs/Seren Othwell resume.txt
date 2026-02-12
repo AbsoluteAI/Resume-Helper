@@ -1,0 +1,71 @@
+Seren Othwell
+
+Email: seren.othwell@example.com
+
+
+Phone: (555) 901-6642
+Location: Clearwater, VA
+LinkedIn: linkedin.com/in/serenothwell
+GitHub: github.com/othwell-df
+
+Objective
+
+Detail-oriented and investigative aspiring digital forensics specialist seeking an entry-level role in cyber investigations or incident response. Passionate about uncovering evidence, analyzing digital footprints, and supporting security teams in identifying root causes of cyber incidents.
+
+Skills
+
+Forensic Tools: Autopsy, FTK Imager, EnCase (student version), Magnet AXIOM (lab)
+
+Technical Skills: Disk Imaging, File System Analysis, Memory Forensics, Log Analysis
+
+Programming/Scripting: Python, Bash
+
+Operating Systems: Windows, Linux (Kali, Ubuntu), macOS basics
+
+Other Skills: Chain of Custody, Report Writing, Evidence Preservation, Data Recovery
+
+Education
+
+B.S. in Digital Forensics & Cyber Investigations
+Clearwater State University — Clearwater, VA
+Expected Graduation: May 2026
+
+Projects
+Forensic Drive Analysis
+
+Conducted a full forensic investigation on a simulated compromised Windows disk image.
+
+Recovered deleted files, analyzed registry artifacts, and documented findings in a formal case report.
+
+Memory Capture & Malware Trace Project
+
+Captured and analyzed system memory to identify malicious processes and hidden network connections.
+
+Used Volatility to extract indicators of compromise (IOCs).
+
+Incident Timeline Reconstruction
+
+Rebuilt a full incident timeline from logs, browser history, and metadata artifacts for a mock intrusion case.
+
+Presented results in a structured forensic report.
+
+Experience
+
+Digital Forensics Intern — Apex Cyber Investigations, Clearwater, VA
+June 2024 – August 2024
+
+Assisted with imaging drives, preserving digital evidence, and documenting procedures.
+
+Analyzed logs and supported senior analysts during case reviews.
+
+Helped test new forensic tools in the internal training lab.
+
+Certifications
+
+CompTIA Cybersecurity Analyst (CySA+) (In Progress)
+
+Intro to Digital Forensics (DFIR Training Course)
+
+Interests
+
+Malware analysis • OSINT • Cybercrime investigations • Reverse engineering (beginner)

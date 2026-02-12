@@ -1,0 +1,18 @@
+# Resume Helper
+# file_selector.py
+
+# Import statements
+import tkinter as tk
+from tkinter import filedialog
+
+# Function allows user to select desired resume file from file explorer
+def select_file():
+    print("select_file function")
+    file_path = filedialog.askopenfilename(
+        title="Select file",
+        filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")]
+    )
+    if file_path:
+        print("Selected file: ", file_path)
+
+    return file_path

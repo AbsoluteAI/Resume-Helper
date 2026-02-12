@@ -1,0 +1,69 @@
+Arden Kellis
+
+Email: arden.kellis@example.com
+
+
+Phone: (555) 902-4471
+Location: Brookhaven, OR
+GitHub: github.com/ardenkellis
+Portfolio: ardenk.dev
+
+Objective
+
+Enthusiastic and disciplined aspiring computer programmer seeking an entry-level role in software development. Eager to apply strong problem-solving skills and contribute to real-world applications while continuing to refine technical abilities.
+
+Skills
+
+Programming Languages: Python, Java, JavaScript, C#
+
+Web Development: HTML5, CSS3, React, Node.js
+
+Databases: MySQL, MongoDB
+
+Tools & Platforms: Git, GitHub, Linux, Docker, VS Code
+
+Key Strengths: Object-Oriented Programming, Debugging, Clean Code Practices, Team Collaboration
+
+Education
+
+B.S. in Computer Science
+Northwest Cascade University — Brookhaven, OR
+Expected Graduation: May 2026
+
+Projects
+CodeFlow Notes App
+
+Developed a cloud-synced note-taking web app using React and Firebase.
+
+Added tagging, dark mode, and search features for improved usability.
+
+AutoSort File Organizer
+
+Built a Python script that automatically sorts and renames downloaded files based on file type and date.
+
+Reduced manual file management time by 70%.
+
+MazeRunner Game
+
+Designed a 2D maze escape game in C# (Unity) featuring custom level generation and AI-controlled obstacles.
+
+Experience
+
+Junior Programming Assistant — Zenith Learning Lab, Brookhaven, OR
+June 2024 – August 2024
+
+Helped maintain internal educational software written in Python and JavaScript.
+
+Fixed minor bugs and implemented UI improvements based on student feedback.
+
+Collaborated on weekly code reviews and learned Agile workflow processes.
+
+Certifications
+
+Java Programming Foundations (Udemy)
+
+Front-End Web Development Certificate (Scrimba)
+
+Interests
+
+Game design • Robotics • Open-source contributions • Machine learning basics
