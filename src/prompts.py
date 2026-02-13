@@ -3,7 +3,6 @@
 
 # Import statements
 import file_selector
-import word_doc
 import text_preprocessing
 
 # Function to determine file type
