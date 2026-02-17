@@ -6,7 +6,6 @@
 # numpy, requests, tqdm, pandas, transformers, tokenizers, and pytorch
 
 # Import statements
-import os
 import prompts
 
 # Main function

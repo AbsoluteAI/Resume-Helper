@@ -1,0 +1,5 @@
+# Ignore nlp_notes.py
+nlp_notes.py
+
+# Ignore all files in docs directory
+docs/

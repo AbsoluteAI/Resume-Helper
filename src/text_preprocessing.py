@@ -1,61 +1,148 @@
 # Resume Helper
 # text_preprocessing.py
 
-# Import statements
+# Imports
+import prompts
 from docx import Document
-from pypdf import PdfReader as pr
+import pymupdf
 import re
 import pandas as pd
+import spacy
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+# nltk.download('punkt_tab')
+# nltk.download('wordnet')
+# nltk.download('stopwords')
 
 # Function to clean text
+def lower_text(text):
+    # print("Lower text function")
+    return text.lower()
+
+def remove_separators(text):
+    # print("remove_separators function")
+    text = ", ".join(text)
+    return text
+
+def text_to_list(text):
+    # print("Text to list function")
+    return text.split()
+
+def list_to_text(list_of_text):
+    # print("List to text function")
+    return " ".join(list_of_text)
+
+# def pkl_save(doc):
+#     file_extension = prompts.file_extension
+#     df = pd.DataFrame(doc)
+#     df_other = df.pivot(index="word", columns="words", values="value")
+#     print(df_other)
+#     # print(df)
+#     # df.to_pickle(f"{file_extension} resume.pkl")
+
 def clean_text(text):
-    pattern = r'[^a-zA-Z0-9,.-]'
-    text = "".join(text)
-    text = text.lower()
+    # print("clean_text function")
+    text = list_to_text(text)
+    text = lower_text(text)
+    pattern = r'[^a-zA-Z0-9]'
     text = re.sub(pattern, ' ', text)
     return text
 
-# Function to transfer extracted list text to pd dataframe
-def list_to_dframe(data):
-    prep_data = data.split(", ")
-    text_dframe = pd.DataFrame(prep_data)
-    copy_dframe = text_dframe.copy()
-    print(text_dframe)
+def filter_nouns(text):
+    # print("Filter nouns function")
+    nouns = [token.text for token in text if token.pos_ in ['NOUN', 'PROPN']]
+    print("Nouns:\n", nouns)
 
-# Function to parse word document
+def filter_verbs(text):
+    # print("Filter verbs function")
+    verbs = [token.text for token in text if token.pos_ in 'VERB']
+    print("Verbs:\n", verbs)
+
+def filter_adjectives(text):
+    # print("Filter adjectives function")
+    adjectives = [token.text for token in text if token.pos_ in 'ADJ']
+    print("adjectives:\n", adjectives)
+
+def filter_numbers(text):
+    # print("Filter numbers function")
+    numbers = [token.text for token in text if token.pos_ in 'NUMBER']
+    print("numbers:\n", numbers)
+
+def filter_misc(text):
+    # print("Filter misc function")
+    misc = [token.text for token in text if token.pos_ in 'X']
+    print("misc:\n", misc)
+
+def spacy_pos(text):
+    # Create spacy doc for parts of speech
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    print(doc)
+
+    # pkl_save(doc)
+
+    # print("Tokens:\n", [(token.text, token.pos_) for token in doc])
+    # filter_nouns(doc)
+    # filter_verbs(doc)
+    # filter_adjectives(doc)
+    # filter_numbers(doc)
+    # filter_misc(doc)
+
+def remove_stopwords(text):
+    # print("Remove stopwords function")
+    stop_words = set(stopwords.words('english'))
+    filtered_sentence = [word for word in text if word.lower() not in stop_words]
+    return filtered_sentence
+
+# Process text with spacy
+def text_preprocessing(text):
+    lemmatizer = WordNetLemmatizer()
+    tokens = word_tokenize(text)
+    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]
+    # print(lemmatized_tokens)
+
+    no_stop = remove_stopwords(lemmatized_tokens)
+    no_stop = list_to_text(no_stop)
+    # print("No stopwords:\n", no_stop)
+
+    spacy_pos(no_stop)
+
+# Extract word file contents
 def docx_file(path):
-    # Extract docx contents
-    print("docx_file function")
+    # print("docx_file function")
     document = Document(path)
-    extracted_text = ""
+    extracted_text = []
 
     # Use for loop to parse through docx file by paragraph, then by line, and finally by word
     for para in document.paragraphs:
         lines_in_paragraph = para.text.splitlines()
         for line in lines_in_paragraph:
             for word in line.split():
-                extracted_text+=word
+                extracted_text.append(word)
     # print(extracted_text)
-    list_to_dframe(extracted_text)
+    text_preprocessing(clean_text(extracted_text))
 
+# Extract pdf file contents
 def pdf_file(path):
-    # Extract pdf file contents
-    print("pdf_file function")
-    reader = pr(path)
+    # print("pdf_file function")
+    doc = pymupdf.open(path)
     text = ""
-    for page in reader.pages:
-        text += page.extract_text()
-    # print(text)
-    list_to_dframe(text)
+    for page in doc:
+        text += page.get_text()
+    doc.close()
+    text = text_to_list(text)
+    text_preprocessing(clean_text(text))
 
+# Extract text file contents
 def txt_file(path):
-    # Extract txt file contents
-    print("txt_file function")
+    # print("txt_file function")
     try:
         with open(path, "r") as f:
             content = f.read()
         # print(content)
-        list_to_dframe(content)
+        content = text_to_list(content)
+        text_preprocessing(clean_text(content))
     except FileNotFoundError:
         print("File not found")
         pass
