@@ -1,5 +1,5 @@
 # Resume Helper
-# text_preprocessing.py
+# text_clean.py
 
 # Imports
 import prompts
@@ -7,10 +7,13 @@ from docx import Document
 import pymupdf
 import re
 import pandas as pd
+from io import StringIO
 import spacy
+import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+import vectorizer_mod
 # nltk.download('punkt_tab')
 # nltk.download('wordnet')
 # nltk.download('stopwords')
@@ -32,6 +35,10 @@ def text_to_list(text):
 def list_to_text(list_of_text):
     # print("List to text function")
     return " ".join(list_of_text)
+
+def str_to_df(text):
+    df = pd.read_csv(StringIO(text), sep=" ")
+    print(df)
 
 # def pkl_save(doc):
 #     file_extension = prompts.file_extension
@@ -79,6 +86,10 @@ def spacy_pos(text):
     nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
     print(doc)
+
+    str_to_df(doc.text)
+
+    # vectorizer_mod.vectorizer_func(doc)
 
     # pkl_save(doc)
 
