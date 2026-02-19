@@ -3,7 +3,9 @@
 
 # Import statements
 import file_selector
-import text_clean
+import word_file
+import pdf_file
+import text_file
 
 file_extension = ""
 
@@ -12,17 +14,17 @@ def file_type(path):
     global file_extension
     # Determine file type
     if path.endswith(".docx"):
-        print("docx file extension recognized")
+        print("docx file extension recognized\nLoading contents...")
         file_extension = "docx"
-        text_clean.docx_file(path)
+        word_file.docx_extract(path)
     elif path.endswith(".pdf"):
-        print("pdf file extension recognized")
+        print("pdf file extension recognized\nLoading contents...")
         file_extension = "pdf"
-        text_clean.pdf_file(path)
+        pdf_file.pdf_extract(path)
     elif path.endswith(".txt"):
-        print("txt file extension recognized")
+        print("txt file extension recognized\nLoading contents...")
         file_extension = "txt"
-        text_clean.txt_file(path)
+        text_file.txt_extract(path)
     else:
         print("File type not recognized")
         pass

@@ -7,7 +7,7 @@ from tkinter import filedialog
 
 # Function allows user to select desired resume file from file explorer
 def select_file():
-    print("select_file function")
+    # print("select_file function")
     root = tk.Tk()
     root.withdraw()
     file_path = filedialog.askopenfilename(
