@@ -15,7 +15,6 @@ def select_file():
         filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")]
     )
     if file_path:
-        # print("Selected file: ", file_path)
         pass
 
     return file_path

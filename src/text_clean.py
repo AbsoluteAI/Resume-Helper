@@ -1,5 +1,5 @@
 # Resume Helper
-# text_clean.py
+# py
 from nltk import WhitespaceTokenizer
 
 # Imports
@@ -10,7 +10,12 @@ import spacy
 from nltk.corpus import stopwords
 
 # global spacy load
-nlp = spacy.load('en_core_web_sm', disable=["parser", "ner"])
+nlp = spacy.load('en_core_web_sm')
+# , disable=["parser", "ner"]
+
+def create_df(text):
+    df = pd.DataFrame(text.split("\n"))
+    return df
 
 # converts all string text to lowercase
 def lower_text(text):
@@ -78,26 +83,12 @@ def lower_dframe(dframe):
     return dframe
 
 # converts string contents to dataframes
-def str_to_df(text, path):
+def str_to_df(text):
     # print("string to df")
-    if path.endswith(".docx"):
-        df = pd.DataFrame(text.split(","))
-        max_columns()
-        df.columns = ["text"]
-        # print("docx dframe:\n", df)
-        return df
-    elif path.endswith(".pdf"):
-        df = pd.DataFrame(text.split("\n"))
-        max_columns()
-        df.columns = ["text"]
-        # print("pdf dframe:\n", df)
-        return df
-    elif path.endswith(".txt"):
-        df = pd.DataFrame(text.split("\n"))
-        max_columns()
-        df.columns = ["text"]
-        # print("text dframe:\n", df)
-        return df
+    df = create_df(text)
+    max_columns()
+    df.columns = ["text"]
+    return df
 
 # remove misc characters from string text
 def clean_text(text):
@@ -114,3 +105,30 @@ def clean_text(text):
 #     print(df_other)
 #     # print(df)
 #     # df.to_pickle(f"{file_extension} resume.pkl")
+
+def process_text(text):
+    # clean the text
+    text = clean_text(text)
+    # print("cleaned text:\n", text)
+
+    # convert string to dframe
+    text_dframe = str_to_df(text)
+    # print("text dframe:\n", text_dframe)
+
+    # convert all characters to lowercase
+    text_dframe = lower_dframe(text_dframe)
+    # print("lowercase dframe:\n", text_dframe)
+
+    # tokenize dataframe
+    text_dframe = tokenize_dframe(text_dframe)
+    # print("tokenized dframe:\n", text_dframe)
+
+    # remove stop words from tokenized dataframe
+    text_dframe["no_stop"] = text_dframe["tokens"].apply(remove_stop_words_df)
+    # print("no stop words dframe:\n", text_dframe)
+
+    # lemmatize and tokenize dframe contents
+    text_dframe["lemmas"] = text_dframe["no_stop"].apply(lemmatize_dframe)
+    # print("lemmatized dframe:\n", text_dframe)
+
+    return text_dframe

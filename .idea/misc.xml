@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (Resume Suggestions)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="C:\Users\E7168849\AppData\Local\anaconda3\envs\Resume_Helper_Env" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="resume_helper_env" project-jdk-type="Python SDK" />
 </project>

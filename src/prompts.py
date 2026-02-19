@@ -36,6 +36,6 @@ def main_menu():
     if start_upload.lower() == "y":
         file_path = file_selector.select_file()
         file_type(file_path)
-        print("file_path: ", file_path)
+        # print("file_path: ", file_path)
     elif start_upload.lower() == "n":
         pass
