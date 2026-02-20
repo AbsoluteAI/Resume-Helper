@@ -131,4 +131,6 @@ def process_text(text):
     text_dframe["lemmas"] = text_dframe["no_stop"].apply(lemmatize_dframe)
     # print("lemmatized dframe:\n", text_dframe)
 
+    text_dframe["lemmas"] = text_dframe["lemmas"].apply(dframe_lists_to_strings)
+
     return text_dframe
