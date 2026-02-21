@@ -25,7 +25,6 @@ def file_type(path):
         print("docx file extension recognized\nLoading contents...")
         file_extension = "docx"
         raw_text = word_file.docx_extract(path)
-        print("docx raw text:\n", raw_text)
     elif path.endswith(".pdf"):
         print("pdf file extension recognized\nLoading contents...")
         file_extension = "pdf"
@@ -79,7 +78,10 @@ def main_menu():
                     print("Sentiment analysis complete...\n", text_dataframe[["text", "sentiment"]])
                     sentiment_analysis.sentiment_sort(text_dataframe)
             case "4":
-                text_classification.resume_sample_process()
+                if text_dataframe is None:
+                    print("No resume loaded...")
+                else:
+                    text_classification.resume_sample_process()
             case "5":
                 break
             case _:

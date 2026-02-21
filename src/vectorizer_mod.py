@@ -44,11 +44,12 @@ def top_stats():
 # perform a term frequency-inverse document frequency calculation
 def vectorizer_tfidf(df):
     global tfidf_df
-    tv = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), min_df=.04)
+    tv = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), min_df=2)
     tfidf = tv.fit_transform(df)
     tfidf_df = pd.DataFrame(tfidf.toarray(), columns=tv.get_feature_names_out())
 
-    # print("TF-IDF Vectorizer:\n", tfidf_df)
+    print("TF-IDF Vectorizer:\n", tfidf_df)
+    print(tfidf_df.shape)
 
     return tfidf_df
 
@@ -58,7 +59,7 @@ def vectorizer_dtm(df):
     print("vectorizer function")
 
     # create countvectorizer object
-    cv = CountVectorizer(stop_words='english', ngram_range=(1, 2), min_df=.1, max_df=.8)
+    cv = CountVectorizer(stop_words='english', ngram_range=(1, 2), min_df=2)
     dtm = cv.fit_transform(df)
     dtm_df = pd.DataFrame(dtm.toarray(), columns=cv.get_feature_names_out())
 
