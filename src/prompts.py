@@ -9,9 +9,10 @@ import text_file
 import text_clean
 import vectorizer_mod
 import sentiment_analysis
-import nlp_ml_mod
-import text_classification
+import sample_comparison
+from src import naive_bayes_mod
 
+# global variables
 file_extension = ""
 raw_text = ""
 text_dataframe = None
@@ -48,18 +49,19 @@ def main_menu():
         print("1. Upload resume")
         print("2. View resume stats")
         print("3. Sentiment analysis")
-        print("4. Text classification")
-        print("5. Exit")
+        print("4. Sample comparison")
+        print("5. Naive Bayes")
+        print("6. Exit")
         choice = input("\nEnter your choice: ")
 
         match choice:
             case "1":
                 file_path = file_selector.select_file()
                 file_type(file_path)
-                print("File contents:\n", raw_text)
+                # print("File contents:\n", raw_text)
                 print("Cleaning file contents...")
                 text_dataframe = text_clean.process_text(raw_text)
-                print("Text processing complete...\n", text_dataframe)
+                print("Text processing complete...\n")
             case "2":
                 if text_dataframe is None:
                     print("No resume loaded...")
@@ -77,12 +79,17 @@ def main_menu():
                     text_dataframe["sentiment"] = text_dataframe.text.apply(sentiment_analysis.sentiment_analysis)
                     print("Sentiment analysis complete...\n", text_dataframe[["text", "sentiment"]])
                     sentiment_analysis.sentiment_sort(text_dataframe)
+                    sentiment_analysis.heatmap_chart(text_dataframe["sentiment"])
             case "4":
                 if text_dataframe is None:
                     print("No resume loaded...")
+                elif vectorizer_mod.top_count is None:
+                    print("You must view your stats before making comparisons...")
                 else:
-                    text_classification.resume_sample_process()
+                    sample_comparison.resume_sample_process()
             case "5":
+                naive_bayes_mod.multinomial_nb()
+            case "6":
                 break
             case _:
                 print("Invalid choice")

@@ -13,6 +13,7 @@ from nltk.corpus import stopwords
 nlp = spacy.load('en_core_web_sm')
 # , disable=["parser", "ner"]
 
+# turn string text to a dataframe
 def create_df(text):
     df = pd.DataFrame(text.split("\n"))
     return df
@@ -38,11 +39,13 @@ def list_to_str(list_of_text):
     # print("List to text function")
     return " ".join(list_of_text)
 
+# replace spaces with new lines
 def create_newline(text):
     print("create new line")
     text = text.replace(" ", "\n")
     return text
 
+# convert dataframe to string list
 def dframe_lists_to_strings(dframe):
     dframe = " ".join(dframe)
     return dframe
@@ -106,6 +109,7 @@ def clean_text(text):
 #     # print(df)
 #     # df.to_pickle(f"{file_extension} resume.pkl")
 
+# main function for text cleaning
 def process_text(text):
     # clean the text
     text = clean_text(text)
